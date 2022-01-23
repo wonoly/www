@@ -32409,6 +32409,10 @@ body {
   overflow-x: hidden;
 }
 
+.container {
+  max-width: 100% !important;
+}
+
 a,
 a:active {
   font-size: 15px;

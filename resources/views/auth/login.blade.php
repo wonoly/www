@@ -30,7 +30,7 @@
     <div class="flex h-screen">
         <div class="h-full flex flex-col shadow-lg z-10 items-center justify-center w-1/2">
 
-            <a href="/" class="font-bold text-2xl absolute top-10 left-10">
+            <a data-aos="zoom-in" href="/" class="font-bold text-2xl absolute top-10 left-10">
                 Wonoly
             </a>
 
@@ -38,12 +38,12 @@
 
                 @csrf
 
-                <div data-aos-delay="200" data-aos="fade-right" class="font-bold mt-5 w-full text-left">
+                <div data-aos="fade-right" class="font-bold mt-5 w-full text-left">
                     {{ __('Email') }}
                 </div>
-                <div data-aos="fade-left" class="mt-2.5 auth_form__input_wrapper form-control{{ $errors->has('email') ? ' is-invalid' : '' }}">
+                <div data-aos="fade-right" data-aos-delay="100" class="mt-2.5 auth_form__input_wrapper form-control{{ $errors->has('email') ? ' is-invalid' : '' }}">
                     <div class="flex justify-center items-center w-[42px] h-[42px]">
-                        <svg class="mx-3" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                        <svg class="mx-3" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"></path></svg>
                     </div>
                     <input id="email" type="email" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="on"  autofocus/>
                 </div>
@@ -54,10 +54,10 @@
                     </span>
                 @endif
 
-                <div data-aos-delay="200" data-aos="fade-right" class="font-bold mt-5 w-full text-left">
+                <div data-aos="fade-right" data-aos-delay="200" class="font-bold mt-5 w-full text-left">
                     {{ __('Password') }}
                 </div>
-                <div data-aos="fade-left" class="mt-2.5 auth_form__input_wrapper form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
+                <div data-aos="fade-right" data-aos-delay="300" class="mt-2.5 auth_form__input_wrapper form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
                     <div class="flex justify-center items-center w-[42px] h-[42px]">
                         <svg class="mx-3" width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
                     </div>
@@ -72,12 +72,12 @@
 
                 <input type="checkbox" name="remember" checked class="hidden" />
 
-                <label for="submit_btn" class="button mt-5 inline-block" style="width: 100%;">
+                <label data-aos="zoom-in" data-aos-delay="450" for="submit_btn" class="button mt-5 inline-block" style="width: 100%;">
                     {{ __('Login') }}
                 </label>
                 <button type="submit" id="submit_btn" class="hidden"></button>
 
-                <div class="w-full relative text-center mt-7">
+                <div data-aos="zoom-in" data-aos-delay="550" class="w-full relative text-center mt-7">
                     {{ __('auth.forgot') }}
                     <a class="mt-20 ml-3" href="{{ route('password.request') }}">
                         {{ __('Reset here') }}

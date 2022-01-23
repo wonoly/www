@@ -49,6 +49,7 @@
 
         {{-- Styles --}}
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         @yield('template_linked_css')
 
@@ -65,6 +66,7 @@
         </style>
 
         {{-- Scripts --}}
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script>
             window.Laravel = {!! json_encode([
                 'csrfToken' => csrf_token(),
@@ -101,6 +103,10 @@
         @endif
 
         @yield('footer_scripts')
+
+        <script>
+            AOS.init();
+        </script>
 
     </body>
 </html>
