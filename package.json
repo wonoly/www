@@ -27,13 +27,15 @@
         "vue-template-compiler": "^2.6.11"
     },
     "dependencies": {
+        "autoprefixer": "^9",
         "chart.js": "^2.9.3",
         "dropzone": "^5.7.0",
         "hideshowpassword": "^2.2.0",
         "laravel-echo": "^1.6.1",
         "moment": "^2.24.0",
         "password-strength-meter": "^1.2.2",
-        "pusher-js": "^4.4.0"
-    },
-    "version": "0.0.0"
+        "postcss": "^7",
+        "pusher-js": "^4.4.0",
+        "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    }
 }
