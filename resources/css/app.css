@@ -1,3 +1,55 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a,
+a:active {
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.button {
+    padding: 7px 80px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    width: 80px;
+    cursor: pointer;
+    transition: 0.3s;
+    user-select: none;
+    transition: 0.1s;
+}
+
+.button:active,
+.button:focus {
+    transition-delay: 0s;
+    transform: scale(0.9) !important;
+}
+
+.button.secondary {
+    background: white;
+    color: black;
+    border: 1px solid #000;
+}
+
+.button:hover {
+    opacity: 0.8;
+}

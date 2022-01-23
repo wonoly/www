@@ -33,7 +33,7 @@ return [
     // Labels
     'whoops'          => 'Whoops! ',
     'someProblems'    => 'There were some problems with your input.',
-    'email'           => 'E-Mail Address',
+    'email'           => 'Email',
     'password'        => 'Password',
     'rememberMe'      => ' Remember Me',
     'login'           => 'Login',

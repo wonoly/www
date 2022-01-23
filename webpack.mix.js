@@ -15,4 +15,5 @@ mix.js('resources/assets/js/app.js', 'public/js')
    .postCss("resources/css/app.css", "public/css", [
       require("tailwindcss"),
    ])
+   .postCss("resources/css/auth.css", "public/css")
    .version();

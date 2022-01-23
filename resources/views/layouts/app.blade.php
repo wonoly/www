@@ -40,11 +40,11 @@
         <meta property="twitter:description" content="Using Wonoly's products you will be safer than ever. Wonoly has a browser, search engine utility extensions and many more to make your experience on the internet better and more private.">
         <meta property="twitter:image" content="/images/meta.png" />
 
-
         <!-- Color -->
         <meta name="theme-color" content="#fafafa">
 
         {{-- Fonts --}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/brands.min.css" integrity="sha512-rQgMaFKZKIoTKfYInSVMH1dSM68mmPYshaohG8pK17b+guRbSiMl9dDbd3Sd96voXZeGerRIFFr2ewIiusEUgg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         @yield('template_linked_fonts')
 
         {{-- Styles --}}
@@ -71,19 +71,13 @@
             ]) !!};
         </script>
 
-        @if (Auth::User() && (Auth::User()->profile) && $theme->link != null && $theme->link != 'null')
-            <link rel="stylesheet" type="text/css" href="{{ $theme->link }}">
-        @endif
-
         @yield('head')
         @include('scripts.ga-analytics')
     </head>
     <body>
         <div id="app">
 
-            @include('partials.nav')
-
-            <main class="py-4">
+            <main class="w-full">
 
                 <div class="container">
                     <div class="row">

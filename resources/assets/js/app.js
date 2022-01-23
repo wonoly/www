@@ -5,7 +5,6 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
 require('hideshowpassword');
 // var Dropzone = require('dropzone');
 var password = require('password-strength-meter');
