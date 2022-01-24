@@ -133,15 +133,15 @@
                 </label>
                 <button type="submit" id="submit_btn" class="hidden"></button>
 
-                <div data-aos-delay="500" data-aos="fade-right" class="w-full relative text-center mt-7">
+                <div data-aos-delay="500" data-aos="fade-right" class="w-full relative text-center mt-8">
                     {{-- TODO: add this to the language array --}}
                     {{ __('Already have an account?') }}
-                    <a class="mt-20 ml-3" href="{{ route('login') }}">
-                        {{ __('Create account') }}
+                    <a class="mt-20 ml-2" href="{{ route('login') }}">
+                        {{ __('Log in here') }}
                     </a>
                 </div>
 
-                <div class="relative w-full my-8">
+                <div class="relative w-full my-9">
                     <hr>
                     <p class="absolute top-2/4 left-2/4 w-max bg-body px-3" style="transform: translate(-50%, -50%)">
                         {{ __("Or Register with") }}
@@ -167,7 +167,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
         $('#password').keyup(function (){
-            $('#password_confirmation').val($(this).val());
+            $('#password-confirm').val($(this).val());
         });
     </script>
 @endsection
