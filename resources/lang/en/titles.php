@@ -15,7 +15,7 @@ return [
     'createProfile'     => 'Create Profile',
     'adminDropdownNav'  => 'Admin',
 
-    'activation'        => 'Registration Started  | Activation Required',
+    'activation'        => 'Activation Required',
     'exceeded'          => 'Activation Error',
 
     'editProfile'       => 'Edit Profile',

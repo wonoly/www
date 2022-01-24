@@ -4,7 +4,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Laravel 2 Step Verification Language Lines
+    | Wonoly 2 Step Verification Language Lines
     |--------------------------------------------------------------------------
     */
     'title'                         => '2-Step Verification',

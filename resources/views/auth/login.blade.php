@@ -7,26 +7,6 @@
 @section('content')
 <div class="container">
 
-    <style>
-        #secondHalf {
-            background: #f9fafe;
-            height: 100vh;
-            position: relative;
-        }
-
-        #secondHalf::before {
-            content: "";
-            background: url(/images/color-background.jpg) no-repeat center center;
-            background-size: cover;
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            bottom: 0px;
-            left: 0px;
-            opacity: 0.18;
-        }
-    </style>
-
     <div class="flex h-screen">
         <div class="h-full flex flex-col shadow-lg z-10 items-center justify-center w-1/2">
 
@@ -95,7 +75,7 @@
 
             </form>
         </div>
-        <div id="secondHalf" class="h-full flex flex-col items-center justify-center w-1/2">
+        <div class="color-bg h-full flex flex-col items-center justify-center w-1/2">
 
         </div>
     </div>

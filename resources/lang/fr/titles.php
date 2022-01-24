@@ -14,7 +14,7 @@ return [
     'editProfile'   => 'Editer le profil',
     'createProfile' => 'Créer un profil',
 
-    'activation' => 'Inscription initiée | Activation requise',
+    'activation' => 'Activation requise',
     'exceeded'   => 'Erreur d\'activation',
 
     'editProfile'    => 'Editer le profil',

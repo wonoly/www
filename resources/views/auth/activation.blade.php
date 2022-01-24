@@ -5,19 +5,20 @@
 @endsection
 
 @section('content')
-	<div class="container">
-		<div class="row">
-			<div class="col-md-10 offset-md-1">
-				<div class="card card-default">
-					<div class="card-header">{{ trans('titles.activation') }}</div>
-					<div class="card-body">
-						<p>{{ trans('auth.regThanks') }}</p>
-						<p>{{ trans('auth.anEmailWasSent',['email' => $email, 'date' => $date ] ) }}</p>
-						<p>{{ trans('auth.clickInEmail') }}</p>
-						<p><a href='/activation' class="btn btn-primary">{{ trans('auth.clickHereResend') }}</a></p>
-					</div>
-				</div>
+<div class="container color-bg">
+	<div class="z-20 w-full h-full flex items-center justify-center">
+		<div class="z-20 wrapper_box" style="width: max-content !important;">
+			<div class="text-2xl font-bold flex items-center">
+				<a href="/" class="w-10 h-10 relative mr-4">
+					@include('partials.wonoly-icon')
+				</a>
+				{{ trans('titles.activation') }}
 			</div>
+			<hr class="my-4">
+			<p>{{ trans('auth.anEmailWasSent',['email' => $email, 'date' => $date ] ) }}</p>
+			<p>{{ trans('auth.clickInEmail') }}</p>
+			<a href='/activation' class="w-full mt-6 button">{{ trans('auth.clickHereResend') }}</a>
 		</div>
 	</div>
+</div>
 @endsection
