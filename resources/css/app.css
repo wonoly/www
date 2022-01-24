@@ -37,6 +37,7 @@ a:hover {
     transition: 0.3s;
     user-select: none;
     transition: 0.1s !important;
+    text-align: center;
 }
 
 .button:active,
