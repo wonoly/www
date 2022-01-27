@@ -243,7 +243,7 @@ class ProfilesController extends Controller
             $currentUser->profile->avatar = $public_path;
             $currentUser->profile->save();
 
-            return response()->json(['path' => $path], 200);
+            return redirect('profile/'.$currentUser->name.'/edit');
         } else {
             return response()->json(false, 200);
         }
