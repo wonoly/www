@@ -21,7 +21,7 @@
                 <div class="settings_nav h-full w-[20%] flex flex-col jusitfy-center items-start h-full w-[20%] flex flex-col jusitfy-center items-start">
                     <h1 class="text-3xl font-bold mb-3">Settings</h1>
                     <!-- TODO: Sections >> tailwindcss -->
-                    <a href="/user/edit" class="section active">
+                    <a href="/profile/{{ $user->name }}/edit" class="section active">
                         Account
                     </a>
                     <a href="/user/changePassword" class="section">
