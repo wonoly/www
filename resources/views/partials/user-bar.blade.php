@@ -25,7 +25,7 @@
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                 </svg>
             </button>
-            <div id="myDropdown" class="w-full z-50 hidden absolute bg-white min-w-[160px] shadow-md border border-gray-300 mt-2 rounded p-1 dropdown-content">
+            <div id="myDropdown" class="min-w-fit w-full z-50 hidden absolute bg-white min-w-[160px] shadow-md border border-gray-300 mt-2 rounded p-1 dropdown-content">
                 <a class="text-black py-3 px-2 no-underline block hover:bg-[rgb(243, 243, 243)] hover:text-black" href="/profile/{{ $user->name }}/edit">Settings</a>
                 <a class="text-black py-3 px-2 no-underline block hover:bg-[rgb(243, 243, 243)] hover:text-black" href="/profile/{{ $user->name }}/edit/notifications">Notifications</a>
                 <hr class="opacity-80 m-1">

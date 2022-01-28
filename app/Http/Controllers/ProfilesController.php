@@ -139,11 +139,11 @@ class ProfilesController extends Controller
 
         if ($user->name !== $request->input('name')) {
             $usernameRules = [
-                'name' => 'required|max:255|unique:users',
+                'name' => 'required|max:255|min:4|unique:users',
             ];
         } else {
             $usernameRules = [
-                'name' => 'required|max:255',
+                'name' => 'required|max:255|min:4',
             ];
         }
         if ($emailCheck) {

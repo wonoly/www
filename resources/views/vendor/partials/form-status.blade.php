@@ -65,7 +65,6 @@
             </span>
         </a>
         <h4>
-            <i class="icon fa fas fa-warning fa-fw" aria-hidden="true"></i>
             <strong>
                 {!! trans('laravelblocker::laravelblocker.flash-messages.whoops') !!}
             </strong>

@@ -56,17 +56,17 @@
 @if (session('errors') && count($errors) > 0)
   <div class="alert absolute rounded bottom-10 right-10 bg-white text-black shadow-md z-50 p-5 w-max-30 fade show" role="alert">
     <div class="w-full h-full flex items-center">
-      <a href="#" class="close text-base" data-dismiss="alert" aria-label="close">&times;</a>
-      <span class="flex items-center h-full">
-        <h4>
-          <i class="icon fa fa-warning fa-fw" aria-hidden="true"></i>
+      <span class="flex h-full">
+        <a href="#" class="close text-base" data-dismiss="alert" aria-label="close">&times;</a>
+        <h4 class="mx-2">
           <strong>{{ Lang::get('auth.whoops') }}</strong> {{ Lang::get('auth.someProblems') }}
+          <br>
+          <ul class="list-decimal">
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+          </ul>
         </h4>
-        <ul>
-          @foreach ($errors->all() as $error)
-            <li>{{ $error }}</li>
-          @endforeach
-        </ul>
       </span>
     </div>
   </div>

@@ -65,7 +65,7 @@ class UsersManagementController extends Controller
         $validator = Validator::make(
             $request->all(),
             [
-                'name'                  => 'required|max:255|unique:users|alpha_dash',
+                'name'                  => 'required|max:255|min:4|unique:users|alpha_dash',
                 'first_name'            => 'alpha_dash',
                 'last_name'             => 'alpha_dash',
                 'email'                 => 'required|email|max:255|unique:users',
@@ -160,7 +160,7 @@ class UsersManagementController extends Controller
 
         if ($emailCheck) {
             $validator = Validator::make($request->all(), [
-                'name'          => 'required|max:255|unique:users|alpha_dash',
+                'name'          => 'required|max:255|min:4|unique:users|alpha_dash',
                 'email'         => 'email|max:255|unique:users',
                 'first_name'    => 'alpha_dash',
                 'last_name'     => 'alpha_dash',
@@ -168,7 +168,7 @@ class UsersManagementController extends Controller
             ]);
         } else {
             $validator = Validator::make($request->all(), [
-                'name'          => 'required|max:255|alpha_dash|unique:users,name,'.$user->id,
+                'name'          => 'required|max:255|min:4|alpha_dash|unique:users,name,'.$user->id,
                 'first_name'    => 'alpha_dash',
                 'last_name'     => 'alpha_dash',
                 'password'      => 'nullable|confirmed|min:6',
