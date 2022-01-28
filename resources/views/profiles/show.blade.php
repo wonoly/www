@@ -62,14 +62,6 @@
                             @endif
 
                             @if ($user->profile)
-                                @if ($user->profile->theme_id && ($currentUser->id == $user->id || $currentUser->hasRole('admin')))
-                                    <dt>
-                                        {{ trans('profile.showProfileTheme') }}
-                                    </dt>
-                                    <dd>
-                                        {{ $currentTheme->name }}
-                                    </dd>
-                                @endif
 
                                 @if ($user->profile->location)
                                     <dt>

@@ -6,7 +6,6 @@ use App\Http\Requests\DeleteUserAccount;
 use App\Http\Requests\UpdateUserPasswordRequest;
 use App\Http\Requests\UpdateUserProfile;
 use App\Models\Profile;
-use App\Models\Theme;
 use App\Models\User;
 use App\Notifications\SendGoodbyeEmail;
 use App\Traits\CaptureIpTrait;
@@ -61,11 +60,8 @@ class ProfilesController extends Controller
             abort(404);
         }
 
-        $currentTheme = Theme::find($user->profile->theme_id);
-
         $data = [
             'user'         => $user,
-            'currentTheme' => $currentTheme,
         ];
 
         return view('profiles.show')->with($data);
@@ -87,17 +83,9 @@ class ProfilesController extends Controller
                 ->with('error_title', trans('profile.notYourProfileTitle'));
         }
 
-        $themes = Theme::where('status', 1)
-                        ->orderBy('name', 'asc')
-                        ->get();
-
-        $currentTheme = Theme::find($user->profile->theme_id);
 
         $data = [
             'user'         => $user,
-            'themes'       => $themes,
-            'currentTheme' => $currentTheme,
-
         ];
 
         return view('profiles.edit')->with($data);
@@ -116,7 +104,7 @@ class ProfilesController extends Controller
     {
         $user = $this->getUserByUsername($username);
 
-        $input = $request->only('theme_id', 'location', 'bio', 'twitter_username', 'github_username', 'avatar_status');
+        $input = $request->only('location', 'bio', 'twitter_username', 'github_username', 'avatar_status');
 
         $ipAddress = new CaptureIpTrait();
 
@@ -217,6 +205,24 @@ class ProfilesController extends Controller
         return redirect('profile/'.$user->name.'/edit')->with('success', trans('profile.updatePWSuccess'));
     }
 
+
+    /**
+     * Delete the curren user's avatar.
+     *
+     * @return mixed
+     */
+    public function delete(Request $request) {
+        $currentUser = \Auth::user();
+        $public_path = '/avatars/default.jpg';
+
+
+        // Save the public image path
+        $currentUser->profile->avatar = $public_path;
+        $currentUser->profile->save();
+
+        return redirect('profile/'.$currentUser->name.'/edit');
+    }
+
     /**
      * Upload and Update user avatar.
      *
@@ -230,7 +236,6 @@ class ProfilesController extends Controller
             $avatar = $request->file('file');
             $filename = 'avatar.'.$avatar->getClientOriginalExtension();
             $save_path = storage_path().'/users/id/'.$currentUser->id.'/uploads/images/avatar/';
-            $path = $save_path.$filename;
             $public_path = '/images/profile/'.$currentUser->id.'/avatar/'.$filename;
 
             // Make the user a folder and set permissions

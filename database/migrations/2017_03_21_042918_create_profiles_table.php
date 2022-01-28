@@ -17,18 +17,16 @@ class CreateProfilesTable extends Migration
             //Structure
             $table->increments('id');
             $table->unsignedBigInteger('user_id')->unsigned()->index();
-            $table->unsignedBigInteger('theme_id')->unsigned()->default(1);
             $table->string('location')->nullable();
             $table->text('bio')->nullable();
             $table->string('twitter_username')->nullable();
             $table->string('github_username')->nullable();
-            $table->string('avatar')->nullable();
+            $table->string('avatar')->default('/avatars/default.jpg');
             $table->boolean('avatar_status')->default(1);
             $table->timestamps();
 
             //Relationships
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('theme_id')->references('id')->on('themes');
         });
     }
 

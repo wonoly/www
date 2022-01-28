@@ -99,6 +99,7 @@ Route::group(['middleware' => ['auth', 'activated', 'currentUser', 'activity', '
 
     // Route to upload user avatar.
     Route::post('avatar/upload', ['as' => 'avatar.upload', 'uses' => 'App\Http\Controllers\ProfilesController@upload']);
+    Route::post('avatar/delete', ['as' => 'avatar.delete', 'uses' => 'App\Http\Controllers\ProfilesController@delete']);
 });
 
 // Registered, activated, and is admin routes.
@@ -119,13 +120,6 @@ Route::group(['middleware' => ['auth', 'activated', 'role:admin', 'activity', 't
         ],
     ]);
     Route::post('search-users', 'App\Http\Controllers\UsersManagementController@search')->name('search-users');
-
-    Route::resource('themes', \App\Http\Controllers\ThemesManagementController::class, [
-        'names' => [
-            'index'   => 'themes',
-            'destroy' => 'themes.destroy',
-        ],
-    ]);
 
     Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
     Route::get('routes', 'App\Http\Controllers\AdminDetailsController@listRoutes');

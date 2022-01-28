@@ -24,9 +24,6 @@ return [
     'adminEditUsers'    => 'Editar usuários',
     'adminNewUser'      => 'Criar um novo usuário',
 
-    'adminThemesList'   => 'Temas',
-    'adminThemesAdd'    => 'Adicionar um novo tema',
-
     'adminLogs'         => 'Arquivos de Log',
     'adminActivity'     => 'Log de Atividade',
     'adminPHP'          => 'Informação sobre o PHP ',

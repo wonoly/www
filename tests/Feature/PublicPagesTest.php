@@ -28,7 +28,6 @@ class PublicPagesTest extends TestCase
     {
         $this->get('/home')->assertStatus(302);
         $this->get('/routes')->assertStatus(302);
-        $this->get('/themes')->assertStatus(302);
         $this->get('/users')->assertStatus(302);
         $this->get('/users/create')->assertStatus(302);
         $this->get('/phpinfo')->assertStatus(302);

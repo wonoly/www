@@ -24,7 +24,6 @@ class UpdateUserProfile extends FormRequest
     public function rules()
     {
         return [
-            'theme_id'         => '',
             'location'         => '',
             'bio'              => 'max:500',
             'twitter_username' => 'max:50',
