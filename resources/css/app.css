@@ -72,6 +72,7 @@ a:hover {
     bottom: 0px;
     left: 0px;
     opacity: 0.18;
+    z-index: 0;
 }
 
 .wrapper_box {

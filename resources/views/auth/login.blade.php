@@ -76,7 +76,9 @@
             </form>
         </div>
         <div class="color-bg h-full flex flex-col items-center justify-center w-1/2">
-
+            <h1 style="text-shadow: 1px 3px rgb(0 0 0 / 0.1);" class="z-50 text-6xl text-white font-bold">
+                We care about security, <br /> not your data.
+            </h1>
         </div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="flex items-center justify-around px-2">
+<div class="flex items-center justify-between">
     {!! HTML::icon_link(route('social.redirect',['provider' => 'facebook']), 'fa fa-facebook', '', array('class' => 'hover:shadow-md cursor-pointer w-10 h-10 rounded-md bg-blue-900 text-base flex items-center justify-center text-white', "data-aos" => "fade-up", "data-aos-delay" => "500")) !!}
     {!! HTML::icon_link(route('social.redirect',['provider' => 'twitter']), 'fa fa-twitter', '', array('class' => 'hover:shadow-md cursor-pointer w-10 h-10 rounded-md bg-blue-500 text-2xl flex items-center justify-center text-white', "data-aos" => "fade-up", "data-aos-delay" => "600")) !!}
     {!! HTML::icon_link(route('social.redirect',['provider' => 'google']), 'fa fa-google', '', array('class' => 'hover:shadow-md border border-gray-500 cursor-pointer text-red-600 w-10 h-10 rounded-md bg-white text-3xl flex items-center justify-center', "data-aos" => "fade-up", "data-aos-delay" => "700")) !!}
