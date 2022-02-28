@@ -55,7 +55,7 @@
                         <label for="change_avatar">
                             <div data-aos="fade-down" class="button ml-6 px-10">Change</div>
                         </label>
-                        <input id="change_avatar" class="hidden" type="file" name="file" required />
+                        <input id="change_avatar" class="hidden" type="file" accept="image/png, image/jpeg, image/jpg" name="file" required />
                     {!! Form::close() !!}
                     {!! Form::open(array('route' => 'avatar.delete', 'method' => 'POST', 'class' => 'flex justify-center m-0')) !!}
                         <button type="submit" class="button secondary ml-5 px-10" data-aos="fade-down" data-aos-delay="50">Delete</button>

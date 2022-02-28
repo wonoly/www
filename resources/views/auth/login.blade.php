@@ -52,7 +52,7 @@
 
                 <input type="checkbox" name="remember" checked class="hidden" />
 
-                <label data-aos="zoom-in" data-aos-delay="450" for="submit_btn" class="button mt-5 inline-block" style="width: 100%;">
+                <label data-aos="zoom-in" data-aos-delay="450" for="submit_btn" class="button shadow-sm mt-5 inline-block" style="width: 100%;">
                     {{ __('Login') }}
                 </label>
                 <button type="submit" id="submit_btn" class="hidden"></button>
@@ -76,9 +76,6 @@
             </form>
         </div>
         <div class="color-bg h-full flex flex-col items-center justify-center w-1/2">
-            <h1 style="text-shadow: 1px 3px rgb(0 0 0 / 0.1);" class="z-50 text-6xl text-white font-bold">
-                We care about security, <br /> not your data.
-            </h1>
         </div>
     </div>
 </div>
