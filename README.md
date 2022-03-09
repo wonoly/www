@@ -26,7 +26,7 @@ This is the website used for wonoly. You can check it out [here](https://wonoly.
 1. Run `git clone https://github.com/wonoly/www.git wonoly`
 2. Create a MySQL database for the project
     * ```mysql -u root -p```, if using Vagrant: ```mysql -u homestead -psecret```
-    * ```create database laravelAuth;```
+    * ```create database wonoly;```
     * ```\q```
 3. Run email logs migrations `php artisan vendor:publish --tag=laravel-email-database-log-migration`
 3. From the projects root run `cp .env.example .env`
