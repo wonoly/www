@@ -13,7 +13,7 @@
     <div data-aos="fade-down" data-aos-delay="500" class="flex items-center justify-center">
 
         <div class="relative inline-block">
-            <button onclick="dropdown()" class="dropbtn w-max padding-2 text-base border-none cursor-pointer bg-transparent flex items-center jusitfy-center">
+            <button onclick="dropdown()" class="dropbtn w-max padding-2 text-base border-none cursor-pointer min-w-[500px] bg-transparent flex items-center jusitfy-center">
                 @if($user->profile->avatar_status == 0)
                     <img src="{{  Gravatar::get($user->email) }}" alt="{{ $user->name }}" width="30" class="rounded-full">
                 @endif
