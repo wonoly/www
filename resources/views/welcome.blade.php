@@ -17,7 +17,63 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
+        <section class="shadow-2xl z-9 shadow-black w-full h-screen" id="header">
+            <nav class="fixed bg-white w-full flex justify-around items-center shadow-sm py-5">
+                <div class="text-3xl font-bold">
+                    Wonoly
+                </div>
+                <div class="flex items-center">
+                    <a href="" class="mx-4">
+                        Browser
+                    </a>
+                    <a href="" class="mx-4">
+                        Search engine
+                    </a>
+                    <a href="" class="mx-4">
+                        Login
+                    </a>
+                    <a href="" class="button mx-4 px-10 max-w-sm">
+                        Register
+                    </a>
+                </div>
+            </nav>
+            <div class="h-full w-full flex items-center justify-center text-center flex-col">
+                <div class="font-bold text-6xl">
+                    Wonoly cares about <span class="border-b-8 border-blue-100">security</span>,
+                </div>
+                <div class="font-bold text-6xl mt-5">
+                    not your data
+                </div>
+            </div>
+        </section>
+        <section class="py-64 relative w-full bg-gray-100 flex px-64 flex items-center">
+            <div>
+                {{-- TODO --}}
+            </div>
+            <div class="h-full w-3/6 flex justify-center flex-col">
+                <div class="font-bold text-5xl mb-5">
+                    Better user experience
+                </div>
+                <div>
+                    Simple and exquisite design, use the most suitable design to enhance user experience with lots of options for customatization.
+                </div>
+            </div>
+        </section>
+        <section class="py-40 relative w-full bg-white flex px-64 flex items-center">
+            <div class="h-full w-3/6 flex justify-center flex-col">
+                <div class="font-bold text-5xl mb-5">
+                    Privacy and Security
+                </div>
+                <div>
+                    Wonoly does not track anything that you do. It is also open source, making it be avaiable for the world to make sure there are no bugs and backdoors.
+                </div>
+                <div class="button mt-5 w-2/6 px-5">Learn more</div>
+            </div>
+            <div class="h-full w-3/6 flex justify-center items-center">
+                <img src="/images/pad-lock.png" class="w-80" alt="">
+            </div>
+        </section>
+        {{-- <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
             @if (Route::has('login'))
                 <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                     @auth
@@ -124,6 +180,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> --}}
     </body>
 </html>
